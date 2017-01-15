@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib
         saveData.register(defaults: ["number" : 0])
         
         var image1 : NSData!
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var image3 : NSData!
         
         image1 = saveData.object(forKey: "1") as? NSData
-        image2 = saveData.object(forKey: "2") as? NSData
+//        image2 = saveData.object(forKey: "2") as? NSData
         //image3 = saveData.object(forKey: "3") as? NSData
         
         var UIImage1 : UIImage!
@@ -37,14 +37,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var UIImage3 : UIImage!
         
         UIImage1 = nsDataToImage(nsData: image1)
-        UIImage2 = nsDataToImage(nsData: image2)
+        //UIImage2 = nsDataToImage(nsData: image2)
         //UIImage3 = nsDataToImage(nsData: image3)
         
         imageView1.image = UIImage1
-        imageView2.image = UIImage2
+        //imageView2.image = UIImage2
         //imageView3.image = UIImage3
         
-        performSegue(withIdentifier: "toMainView", sender: nil)
+    
         
     }
     
@@ -53,6 +53,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func move(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toMainView", sender: nil)
+    }
     @IBAction func takePhoto(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera){
             let picker = UIImagePickerController()

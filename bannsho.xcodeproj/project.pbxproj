@@ -14,6 +14,16 @@
 		434ED0711DE167E200BC8B73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434ED06F1DE167E200BC8B73 /* LaunchScreen.storyboard */; };
 		434ED07C1DE167E300BC8B73 /* bannshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED07B1DE167E300BC8B73 /* bannshoTests.swift */; };
 		434ED0871DE167E300BC8B73 /* bannshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED0861DE167E300BC8B73 /* bannshoUITests.swift */; };
+		4355DC871E2B405900781E68 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC861E2B405900781E68 /* CustomCell.xib */; };
+		4355DC891E2B415700781E68 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355DC881E2B415700781E68 /* CustomCell.swift */; };
+		4355DC8B1E2B429600781E68 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355DC8A1E2B429600781E68 /* FileViewController.swift */; };
+		4355DC901E2B4CD900781E68 /* 暗殺教室０.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC8F1E2B4CD900781E68 /* 暗殺教室０.jpg */; };
+		4355DC921E2B4CF000781E68 /* 暗殺教室.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC911E2B4CF000781E68 /* 暗殺教室.jpg */; };
+		4355DC941E2B4DE900781E68 /* 4-rampo-b.png in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC931E2B4DE900781E68 /* 4-rampo-b.png */; };
+		4355DC961E2B576800781E68 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355DC951E2B576800781E68 /* CollectionViewController.swift */; };
+		4355DC981E2B586400781E68 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC971E2B586400781E68 /* CollectionCell.xib */; };
+		4355DC9A1E2B588600781E68 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355DC991E2B588600781E68 /* CollectionCell.swift */; };
+		4355DC9C1E2B5F4A00781E68 /* 1-nakajima-b.png in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */; };
 		435DA25D1DF3FA7C0044A56D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435DA25C1DF3FA7C0044A56D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +58,16 @@
 		434ED0821DE167E300BC8B73 /* bannshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bannshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		434ED0861DE167E300BC8B73 /* bannshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bannshoUITests.swift; sourceTree = "<group>"; };
 		434ED0881DE167E300BC8B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4355DC861E2B405900781E68 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		4355DC881E2B415700781E68 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		4355DC8A1E2B429600781E68 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		4355DC8F1E2B4CD900781E68 /* 暗殺教室０.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "暗殺教室０.jpg"; sourceTree = "<group>"; };
+		4355DC911E2B4CF000781E68 /* 暗殺教室.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "暗殺教室.jpg"; sourceTree = "<group>"; };
+		4355DC931E2B4DE900781E68 /* 4-rampo-b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-rampo-b.png"; sourceTree = "<group>"; };
+		4355DC951E2B576800781E68 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		4355DC971E2B586400781E68 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		4355DC991E2B588600781E68 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-nakajima-b.png"; sourceTree = "<group>"; };
 		435DA25C1DF3FA7C0044A56D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +119,7 @@
 		434ED0651DE167E200BC8B73 /* bannsho */ = {
 			isa = PBXGroup;
 			children = (
+				4355DC8E1E2B4CA800781E68 /* image */,
 				434ED0661DE167E200BC8B73 /* AppDelegate.swift */,
 				434ED0681DE167E200BC8B73 /* ViewController.swift */,
 				434ED06A1DE167E200BC8B73 /* Main.storyboard */,
@@ -106,6 +127,12 @@
 				434ED06F1DE167E200BC8B73 /* LaunchScreen.storyboard */,
 				434ED0721DE167E200BC8B73 /* Info.plist */,
 				435DA25C1DF3FA7C0044A56D /* MainViewController.swift */,
+				4355DC861E2B405900781E68 /* CustomCell.xib */,
+				4355DC881E2B415700781E68 /* CustomCell.swift */,
+				4355DC8A1E2B429600781E68 /* FileViewController.swift */,
+				4355DC951E2B576800781E68 /* CollectionViewController.swift */,
+				4355DC971E2B586400781E68 /* CollectionCell.xib */,
+				4355DC991E2B588600781E68 /* CollectionCell.swift */,
 			);
 			path = bannsho;
 			sourceTree = "<group>";
@@ -126,6 +153,17 @@
 				434ED0881DE167E300BC8B73 /* Info.plist */,
 			);
 			path = bannshoUITests;
+			sourceTree = "<group>";
+		};
+		4355DC8E1E2B4CA800781E68 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */,
+				4355DC931E2B4DE900781E68 /* 4-rampo-b.png */,
+				4355DC911E2B4CF000781E68 /* 暗殺教室.jpg */,
+				4355DC8F1E2B4CD900781E68 /* 暗殺教室０.jpg */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +275,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				434ED0711DE167E200BC8B73 /* LaunchScreen.storyboard in Resources */,
+				4355DC9C1E2B5F4A00781E68 /* 1-nakajima-b.png in Resources */,
+				4355DC921E2B4CF000781E68 /* 暗殺教室.jpg in Resources */,
+				4355DC901E2B4CD900781E68 /* 暗殺教室０.jpg in Resources */,
 				434ED06E1DE167E200BC8B73 /* Assets.xcassets in Resources */,
+				4355DC871E2B405900781E68 /* CustomCell.xib in Resources */,
+				4355DC941E2B4DE900781E68 /* 4-rampo-b.png in Resources */,
 				434ED06C1DE167E200BC8B73 /* Main.storyboard in Resources */,
+				4355DC981E2B586400781E68 /* CollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4355DC961E2B576800781E68 /* CollectionViewController.swift in Sources */,
 				435DA25D1DF3FA7C0044A56D /* MainViewController.swift in Sources */,
+				4355DC8B1E2B429600781E68 /* FileViewController.swift in Sources */,
 				434ED0691DE167E200BC8B73 /* ViewController.swift in Sources */,
+				4355DC9A1E2B588600781E68 /* CollectionCell.swift in Sources */,
+				4355DC891E2B415700781E68 /* CustomCell.swift in Sources */,
 				434ED0671DE167E200BC8B73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
