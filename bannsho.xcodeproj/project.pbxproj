@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D6682D492CB173A69310C9 /* Pods_bannsho.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47D0371091C756863ED571E /* Pods_bannsho.framework */; };
+		432595071E5031050087A808 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432595061E5031050087A808 /* DataModel.swift */; };
+		434EA7A51EC8361200F17B40 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */; };
 		434ED0671DE167E200BC8B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED0661DE167E200BC8B73 /* AppDelegate.swift */; };
 		434ED0691DE167E200BC8B73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED0681DE167E200BC8B73 /* ViewController.swift */; };
 		434ED06C1DE167E200BC8B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434ED06A1DE167E200BC8B73 /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CBE427282BE8E9DD439D9A9 /* Pods-bannsho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.debug.xcconfig"; sourceTree = "<group>"; };
+		432595061E5031050087A808 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 		434ED0631DE167E200BC8B73 /* bannsho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bannsho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434ED0661DE167E200BC8B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		434ED0681DE167E200BC8B73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 		4355DC991E2B588600781E68 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-nakajima-b.png"; sourceTree = "<group>"; };
 		435DA25C1DF3FA7C0044A56D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.release.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.release.xcconfig"; sourceTree = "<group>"; };
+		B47D0371091C756863ED571E /* Pods_bannsho.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bannsho.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D6682D492CB173A69310C9 /* Pods_bannsho.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +112,8 @@
 				434ED07A1DE167E300BC8B73 /* bannshoTests */,
 				434ED0851DE167E300BC8B73 /* bannshoUITests */,
 				434ED0641DE167E200BC8B73 /* Products */,
+				C5D2E635C3C52F98D8E4B9CF /* Pods */,
+				8CA4112BE0702AF1675ADC16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,8 +142,10 @@
 				4355DC881E2B415700781E68 /* CustomCell.swift */,
 				4355DC8A1E2B429600781E68 /* FileViewController.swift */,
 				4355DC951E2B576800781E68 /* CollectionViewController.swift */,
-				4355DC971E2B586400781E68 /* CollectionCell.xib */,
 				4355DC991E2B588600781E68 /* CollectionCell.swift */,
+				4355DC971E2B586400781E68 /* CollectionCell.xib */,
+				432595061E5031050087A808 /* DataModel.swift */,
+				434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */,
 			);
 			path = bannsho;
 			sourceTree = "<group>";
@@ -166,6 +179,23 @@
 			name = image;
 			sourceTree = "<group>";
 		};
+		8CA4112BE0702AF1675ADC16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B47D0371091C756863ED571E /* Pods_bannsho.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5D2E635C3C52F98D8E4B9CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CBE427282BE8E9DD439D9A9 /* Pods-bannsho.debug.xcconfig */,
+				67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 434ED08B1DE167E300BC8B73 /* Build configuration list for PBXNativeTarget "bannsho" */;
 			buildPhases = (
+				9430D7F84C2C87F08EB21994 /* [CP] Check Pods Manifest.lock */,
 				434ED05F1DE167E200BC8B73 /* Sources */,
 				434ED0601DE167E200BC8B73 /* Frameworks */,
 				434ED0611DE167E200BC8B73 /* Resources */,
+				DD3F7F5E70BF526052803806 /* [CP] Embed Pods Frameworks */,
+				C0027D08588930594D820AC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,6 +335,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9430D7F84C2C87F08EB21994 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0027D08588930594D820AC8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bannsho/Pods-bannsho-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD3F7F5E70BF526052803806 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bannsho/Pods-bannsho-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		434ED05F1DE167E200BC8B73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -311,7 +392,9 @@
 				435DA25D1DF3FA7C0044A56D /* MainViewController.swift in Sources */,
 				4355DC8B1E2B429600781E68 /* FileViewController.swift in Sources */,
 				434ED0691DE167E200BC8B73 /* ViewController.swift in Sources */,
+				434EA7A51EC8361200F17B40 /* ShowImageViewController.swift in Sources */,
 				4355DC9A1E2B588600781E68 /* CollectionCell.swift in Sources */,
+				432595071E5031050087A808 /* DataModel.swift in Sources */,
 				4355DC891E2B415700781E68 /* CustomCell.swift in Sources */,
 				434ED0671DE167E200BC8B73 /* AppDelegate.swift in Sources */,
 			);
@@ -463,13 +546,14 @@
 		};
 		434ED08C1DE167E300BC8B73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CBE427282BE8E9DD439D9A9 /* Pods-bannsho.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LCPF7KFHDX;
 				INFOPLIST_FILE = bannsho/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.suzukirina.bannsho;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suzukirinaApp.bannshoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -477,13 +561,14 @@
 		};
 		434ED08D1DE167E300BC8B73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LCPF7KFHDX;
 				INFOPLIST_FILE = bannsho/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.suzukirina.bannsho;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suzukirinaApp.bannshoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

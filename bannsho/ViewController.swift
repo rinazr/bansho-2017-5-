@@ -8,8 +8,10 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+//,UITableViewDataSource{
     
     
     @IBOutlet weak var imageView2: UIImageView!
@@ -18,29 +20,44 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView1: UIImageView!
     let saveData: UserDefaults = UserDefaults.standard
     
+     var numberData : Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
         saveData.register(defaults: ["number" : 0])
         
-        var image1 : NSData!
-        var image2 : NSData!
-        var image3 : NSData!
+        if saveData.object(forKey: "number") != nil{
+            numberData = saveData.object(forKey: "number") as! Int
+        }
         
-        image1 = saveData.object(forKey: "1") as? NSData
-//        image2 = saveData.object(forKey: "2") as? NSData
+        var image1 : NSData = NSData()
+        //var image2 : NSData!
+        //var image3 : NSData!
+        
+        
+        
+        //image2 = saveData.object(forKey: "2") as? NSData
         //image3 = saveData.object(forKey: "3") as? NSData
         
         var UIImage1 : UIImage!
-        var UIImage2 : UIImage!
-        var UIImage3 : UIImage!
+//        var UIImage2 : UIImage!
+//        var UIImage3 : UIImage!
         
-        UIImage1 = nsDataToImage(nsData: image1)
+        if numberData != 0{
+            
+            //image1 = (saveData.object(forKey: "1") as? NSData)!
+            //UIImage1 = nsDataToImage(nsData: image1)
+            //imageView1.image = UIImage1
+            
+        }
+
+        
+        
         //UIImage2 = nsDataToImage(nsData: image2)
         //UIImage3 = nsDataToImage(nsData: image3)
         
-        imageView1.image = UIImage1
         //imageView2.image = UIImage2
         //imageView3.image = UIImage3
         
@@ -77,24 +94,87 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //撮影した画像をUIImage型として取得しpickedImageに代入
         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         
-        var numberData : Int = 0
-        //numberDataを取得する
-        if saveData.object(forKey: "number") != nil{
-            numberData = saveData.object(forKey: "number") as! Int
-        }
-        //numberDataに1足したものを上書きする
-        numberData = numberData + 1
+//
+//        //numberDataを取得する
+//        if saveData.object(forKey: "number") != nil{
+//            numberData = saveData.object(forKey: "number") as! Int
+//        }
+//        //numberDataに1足したものを上書きする
+//        numberData = numberData + 1
+//        print(numberData)
+//        
+//        
+//        
+//        //NSDataにpickedImageを保存
+//        saveData.set(imageToNSData(image: pickedImage!), forKey: String(numberData))
+//        saveData.synchronize()
+//        
+//        
+//        
+//        //numberDataを保存
+//        saveData.set(numberData, forKey: "number")
+//        saveData.synchronize()
         
-        //NSDataにpickedImageを保存
-        saveData.set(imageToNSData(image: pickedImage!), forKey: String(numberData))
-        saveData.synchronize()
         
-        //numberDataを保存
-        saveData.set(numberData, forKey: "number")
-        saveData.synchronize()
+        
+        // print(getdate)
+        
         
         //閉じる処理
         imagePicker.dismiss(animated: true, completion: nil)
+        
+        let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+            self.navigationController!.popViewController(animated: true)
+            NSLog("OKボタンが押されました")
+            
+            
+            
+            if let textFields = alert.textFields{
+                let textField1 = textFields[0]
+                let textField2 = textFields[1]
+                print(textField1.text)
+                print(textField2.text)
+                
+                let realm = try! Realm()
+                let dataModel = DataModel()
+                
+                dataModel.name = textField1.text!
+                dataModel.image = UIImagePNGRepresentation(pickedImage!)! as NSData
+                dataModel.folderName = textField2.text!
+                
+                try! realm.write {
+                    realm.add(dataModel)
+                }
+
+            }
+            
+        }))
+        
+        //テキストフィールド
+        alert.addTextField(configurationHandler: {(textField) -> Void in
+            textField.placeholder = "画像名"
+        })
+        
+        alert.addTextField(configurationHandler: {(textField) -> Void in
+            textField.placeholder = "フォルダ名"
+        })
+        
+        
+        
+//        var table = UITableView()
+//        table.frame = CGRect(x:0,y:0,width:view.bounds.width*0.85,height:150)
+//        table.dataSource = self
+//        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        //alert.view.addSubview(table)
+        
+        
+        
+        present(alert, animated: true, completion: nil)
+        
+        
         
     }
     
@@ -109,6 +189,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return UIImage(data: nsData as Data)
     }
     
+    
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        // 再利用するCellを取得する.
+//         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+//        
+//        // Cellに値を設定する.
+//        cell.textLabel!.text = "@@@@"
+//        
+//        return cell
+//    }
+//    
     
     
     
