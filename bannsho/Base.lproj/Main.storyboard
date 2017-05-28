@@ -35,6 +35,10 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wmi-ec-QHW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIh-IN-Vwr">
+                                <rect key="frame" x="32" y="420" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -46,6 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="03H-aa-brh"/>
                     <connections>
+                        <outlet property="imageview" destination="sIh-IN-Vwr" id="HdM-Hv-SxT"/>
                         <segue destination="z6C-4d-x1S" kind="push" identifier="toMainView" id="svQ-cO-nui"/>
                     </connections>
                 </viewController>
@@ -96,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91r-LZ-9FG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="120.4225352112676"/>
+            <point key="canvasLocation" x="1952" y="121"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="FlZ-UH-UhK">
@@ -162,9 +167,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRI-Hr-elw">
-                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="446"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGz-bz-JVo">
+                                <rect key="frame" x="0.0" y="518" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="rRs-f6-Ydd">
+                                        <connections>
+                                            <action selector="shareImage:" destination="QsV-DZ-3Ee" id="JIe-Py-Hxd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="b7e-WC-eGW"/>
+                                    <barButtonItem systemItem="trash" id="u2C-P3-hsB">
+                                        <connections>
+                                            <action selector="trashPhoto:" destination="QsV-DZ-3Ee" id="3tF-Cf-zN2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -174,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jz-Sa-Fap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3699.375" y="118.30985915492958"/>
+            <point key="canvasLocation" x="3518" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U6f-RT-osa">

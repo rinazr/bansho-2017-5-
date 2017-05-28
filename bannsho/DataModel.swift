@@ -16,4 +16,5 @@ class DataModel: Object {
     dynamic var name : String = "画像名"
     dynamic var image = NSData()
     dynamic var folderName: String = "所属"
+    dynamic var id:Int = 0
 }

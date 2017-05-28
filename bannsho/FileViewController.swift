@@ -55,7 +55,7 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
     
     //セルの設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return set.count + 2
+        return set.count + 1
     }
     
     //ID付きのセルを取得して、セル付属のtextLabelに「テスト」と表示させてみる
@@ -99,8 +99,6 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         }else if indexPath.row == 0{
             CollectionViewController.folderNameString = "all"
     
-        }else{
-            CollectionViewController.folderNameString = "trush"
         }
     }}
 

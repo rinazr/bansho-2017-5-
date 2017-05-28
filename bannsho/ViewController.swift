@@ -11,7 +11,7 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-//,UITableViewDataSource{
+    //,UITableViewDataSource{
     
     
     @IBOutlet weak var imageView2: UIImageView!
@@ -20,8 +20,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView1: UIImageView!
     let saveData: UserDefaults = UserDefaults.standard
     
-     var numberData : Int = 0
+    var numberData : Int = 0
     
+    @IBOutlet weak var imageview: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +43,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //image3 = saveData.object(forKey: "3") as? NSData
         
         var UIImage1 : UIImage!
-//        var UIImage2 : UIImage!
-//        var UIImage3 : UIImage!
+        //        var UIImage2 : UIImage!
+        //        var UIImage3 : UIImage!
         
         if numberData != 0{
             
@@ -52,7 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //imageView1.image = UIImage1
             
         }
-
+        
         
         
         //UIImage2 = nsDataToImage(nsData: image2)
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //imageView2.image = UIImage2
         //imageView3.image = UIImage3
         
-    
+        
         
     }
     
@@ -92,28 +93,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         //撮影した画像をUIImage型として取得しpickedImageに代入
-        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-        
-//
-//        //numberDataを取得する
-//        if saveData.object(forKey: "number") != nil{
-//            numberData = saveData.object(forKey: "number") as! Int
-//        }
-//        //numberDataに1足したものを上書きする
-//        numberData = numberData + 1
-//        print(numberData)
-//        
-//        
-//        
-//        //NSDataにpickedImageを保存
-//        saveData.set(imageToNSData(image: pickedImage!), forKey: String(numberData))
-//        saveData.synchronize()
-//        
-//        
-//        
-//        //numberDataを保存
-//        saveData.set(numberData, forKey: "number")
-//        saveData.synchronize()
+        let pickedImage : UIImage = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+        //
+        //        //numberDataを取得する
+        //        if saveData.object(forKey: "number") != nil{
+        //            numberData = saveData.object(forKey: "number") as! Int
+        //        }
+        //        //numberDataに1足したものを上書きする
+        //        numberData = numberData + 1
+        //        print(numberData)
+        //
+        //
+        //
+        //        //NSDataにpickedImageを保存
+        //        saveData.set(imageToNSData(image: pickedImage!), forKey: String(numberData))
+        //        saveData.synchronize()
+        //
+        //
+        //
+        //        //numberDataを保存
+        //        saveData.set(numberData, forKey: "number")
+        //        saveData.synchronize()
         
         
         
@@ -134,20 +134,45 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let textFields = alert.textFields{
                 let textField1 = textFields[0]
                 let textField2 = textFields[1]
-                print(textField1.text)
-                print(textField2.text)
+                print(textField1.text!)
+                print(textField2.text!)
                 
                 let realm = try! Realm()
+                
+                
+               
+                
+                
+                
                 let dataModel = DataModel()
                 
                 dataModel.name = textField1.text!
-                dataModel.image = UIImagePNGRepresentation(pickedImage!)! as NSData
+                dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
                 dataModel.folderName = textField2.text!
+                
+                
+                let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
+                
+                if result?.id == nil{
+                    
+                    dataModel.id = 0
+                }else{
+                    dataModel.id = (result?.id)! + 1
+                }
+                
+                
+                print("ID:" + String(describing: dataModel.id))
                 
                 try! realm.write {
                     realm.add(dataModel)
                 }
-
+                
+                
+                
+                //gazou
+                let data =  UIImageJPEGRepresentation(pickedImage,0.8)! as NSData as Data
+                let image = UIImage(data:data)
+                self.imageview.image = image
             }
             
         }))
@@ -163,10 +188,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         
-//        var table = UITableView()
-//        table.frame = CGRect(x:0,y:0,width:view.bounds.width*0.85,height:150)
-//        table.dataSource = self
-//        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        //        var table = UITableView()
+        //        table.frame = CGRect(x:0,y:0,width:view.bounds.width*0.85,height:150)
+        //        table.dataSource = self
+        //        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         //alert.view.addSubview(table)
         
@@ -191,21 +216,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        // 再利用するCellを取得する.
-//         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-//        
-//        // Cellに値を設定する.
-//        cell.textLabel!.text = "@@@@"
-//        
-//        return cell
-//    }
-//    
+    //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //        return 1
+    //    }
+    //
+    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //
+    //        // 再利用するCellを取得する.
+    //         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+    //        
+    //        // Cellに値を設定する.
+    //        cell.textLabel!.text = "@@@@"
+    //        
+    //        return cell
+    //    }
+    //    
     
     
     

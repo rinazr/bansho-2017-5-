@@ -27,26 +27,13 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         collection.dataSource = self
         collection.delegate = self
-    
-        dataModels = realm.objects(DataModel)
-        
-        if CollectionViewController.folderNameString != "all"{
-            
-            for data in dataModels{
-                if data.folderName == CollectionViewController.folderNameString{
-                    searchResult.append(data)
-                }
-            }
-        }else{
-            
-            searchResult.append(contentsOf: dataModels)
-            
-        }
-        
-        
-        
-        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        search()
+        collection.reloadData()
     }
     
     
@@ -65,7 +52,10 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "collectionCell",for: indexPath) as! CollectionCell
         
-        cell.imageC.image = UIImage(data:searchResult[indexPath.row].image as Data)
+        
+        let dataVal : Data = searchResult[indexPath.row].image as Data
+        let image:UIImage = UIImage(data:dataVal)!
+        cell.imageC.image = image
         
         let imageName0 = searchResult[indexPath.row].name as String
         let folderName0 = searchResult[indexPath.row].folderName as String
@@ -84,13 +74,34 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         ShowImageViewController.image = UIImage(data:searchResult[indexPath.row].image as Data)!
         ShowImageViewController.name = searchResult[indexPath.row].name as String
+        ShowImageViewController.id = searchResult[indexPath.row].id as Int
+        
         performSegue(withIdentifier: "toFinal", sender: nil)
         
        
     }
     
     
-    
+    func search(){
+        
+        searchResult = []
+        
+        dataModels = realm.objects(DataModel)
+        
+        if CollectionViewController.folderNameString != "all"{
+            
+            for data in dataModels{
+                if data.folderName == CollectionViewController.folderNameString{
+                    searchResult.append(data)
+                }
+            }
+        }else{
+            
+            searchResult.append(contentsOf: dataModels)
+            
+        }
+
+    }
     
     /*
      // MARK: - Navigation
