@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07D6682D492CB173A69310C9 /* Pods_bannsho.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47D0371091C756863ED571E /* Pods_bannsho.framework */; };
 		432595071E5031050087A808 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432595061E5031050087A808 /* DataModel.swift */; };
+		4349AD831EFF933200959502 /* akka.png in Resources */ = {isa = PBXBuildFile; fileRef = 4349AD821EFF933200959502 /* akka.png */; };
 		434EA7A51EC8361200F17B40 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */; };
 		434ED0671DE167E200BC8B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED0661DE167E200BC8B73 /* AppDelegate.swift */; };
 		434ED0691DE167E200BC8B73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED0681DE167E200BC8B73 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		2CBE427282BE8E9DD439D9A9 /* Pods-bannsho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.debug.xcconfig"; sourceTree = "<group>"; };
 		432595061E5031050087A808 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		4349AD821EFF933200959502 /* akka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akka.png; sourceTree = "<group>"; };
 		434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 		434ED0631DE167E200BC8B73 /* bannsho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bannsho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434ED0661DE167E200BC8B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,10 +173,11 @@
 		4355DC8E1E2B4CA800781E68 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */,
+				4349AD821EFF933200959502 /* akka.png */,
 				4355DC931E2B4DE900781E68 /* 4-rampo-b.png */,
 				4355DC911E2B4CF000781E68 /* 暗殺教室.jpg */,
 				4355DC8F1E2B4CD900781E68 /* 暗殺教室０.jpg */,
+				4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				434ED0711DE167E200BC8B73 /* LaunchScreen.storyboard in Resources */,
+				4349AD831EFF933200959502 /* akka.png in Resources */,
 				4355DC9C1E2B5F4A00781E68 /* 1-nakajima-b.png in Resources */,
 				4355DC921E2B4CF000781E68 /* 暗殺教室.jpg in Resources */,
 				4355DC901E2B4CD900781E68 /* 暗殺教室０.jpg in Resources */,

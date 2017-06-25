@@ -19,6 +19,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     var set = Set<String>()
     static var folderNameString = ""
     
+    @IBOutlet weak var chooseButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +29,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         collection.dataSource = self
         collection.delegate = self
         // Do any additional setup after loading the view.
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,8 +56,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "collectionCell",for: indexPath) as! CollectionCell
         
         
-        let dataVal : Data = searchResult[indexPath.row].image as Data
+        let dataVal : Data = searchResult[indexPath.row].reimage as Data
         let image:UIImage = UIImage(data:dataVal)!
+        //let imageK = resizeImage(src: image)
         cell.imageC.image = image
         
         let imageName0 = searchResult[indexPath.row].name as String
@@ -102,6 +106,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         }
 
     }
+
     
     /*
      // MARK: - Navigation

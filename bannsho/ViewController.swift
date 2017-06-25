@@ -140,32 +140,36 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 let realm = try! Realm()
                 
                 
-               
                 
-                
-                
-                let dataModel = DataModel()
-                
-                dataModel.name = textField1.text!
-                dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
-                dataModel.folderName = textField2.text!
-                
-                
-                let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
-                
-                if result?.id == nil{
+              
                     
-                    dataModel.id = 0
-                }else{
-                    dataModel.id = (result?.id)! + 1
-                }
-                
-                
-                print("ID:" + String(describing: dataModel.id))
-                
-                try! realm.write {
-                    realm.add(dataModel)
-                }
+                    
+                    
+                    let dataModel = DataModel()
+                    
+                    dataModel.name = textField1.text!
+                    dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
+                    dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage), 0.0)! as NSData
+                    dataModel.folderName = textField2.text!
+                    
+                    
+                    let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
+                    
+                    if result?.id == nil{
+                        
+                        dataModel.id = 0
+                    }else{
+                        dataModel.id = (result?.id)! + 1
+                    }
+                    
+                    
+                    print("ID:" + String(describing: dataModel.id))
+                    
+                    try! realm.write {
+                        realm.add(dataModel)
+                        
+                    }
+                    
                 
                 
                 
@@ -213,6 +217,37 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         return UIImage(data: nsData as Data)
     }
+    /// イメージのサイズを変更
+    func resizeImage(src: UIImage) -> UIImage {
+        
+        var resizedSize : CGSize!
+        let maxLongSide : CGFloat = 75
+        
+        // リサイズが必要か？
+        let ss = src.size
+        if maxLongSide == 0 || ( ss.width <= maxLongSide && ss.height <= maxLongSide ) {
+            resizedSize = ss
+            return src
+        }
+        
+        // TODO: リサイズ回りの処理を切りだし
+        
+        // リサイズ後のサイズを計算
+        let ax = ss.width / maxLongSide
+        let ay = ss.height / maxLongSide
+        let ar = ax > ay ? ax : ay
+        let re = CGRect(x: 0, y: 0, width: ss.width / ar, height: ss.height / ar)
+        
+        // リサイズ
+        UIGraphicsBeginImageContext(re.size)
+        src.draw(in: re)
+        let dst = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        resizedSize = dst?.size
+        
+        return dst!
+    }
     
     
     
@@ -224,13 +259,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //
     //        // 再利用するCellを取得する.
     //         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-    //        
+    //
     //        // Cellに値を設定する.
     //        cell.textLabel!.text = "@@@@"
-    //        
+    //
     //        return cell
     //    }
-    //    
+    //
     
     
     

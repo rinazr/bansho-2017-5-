@@ -16,9 +16,16 @@ class ShowImageViewController: UIViewController {
     
     @IBOutlet weak var imageview: UIImageView!
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if ShowImageViewController.name == ""{
+        self.navigationItem.title = "名称未設定"
+            
+        }else{
+       self.navigationItem.title = ShowImageViewController.name;
+        }
         imageview.image = ShowImageViewController.image
         
         // Do any additional setup after loading the view.

@@ -13,41 +13,43 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
     
     var set: Set<String> = []
     var array : Array<String> = Array<String>()
-     var dataModels :Results<DataModel>!
+    var dataModels :Results<DataModel>!
     let realm = try! Realm()
-
-
+    
+    
     @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       table.dataSource = self
+        table.dataSource = self
         table.delegate = self
         
         let nib = UINib(nibName: "CustomCell", bundle:nil)
         table.register(nib, forCellReuseIdentifier: "customCell")
         
         
-         dataModels = realm.objects(DataModel)
+        dataModels = realm.objects(DataModel)
         
         for dataModel in dataModels {
             
             print(dataModel.folderName)
-            set.insert(dataModel.folderName)
             
+            if dataModel.folderName != ""{
+                set.insert(dataModel.folderName)
+            }
         }
         
         print(set)
         
         
         array.append(contentsOf: set)
-
+        
         
         //performSegue(withIdentifier: "move1", sender: nil)
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -83,7 +85,7 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print("qqq")
@@ -93,28 +95,28 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         if indexPath.row >= 1 && indexPath.row < set.count + 1 {
             
             print(indexPath.row)
-        
-        CollectionViewController.folderNameString = array[indexPath.row - 1]
-        
+            
+            CollectionViewController.folderNameString = array[indexPath.row - 1]
+            
         }else if indexPath.row == 0{
             CollectionViewController.folderNameString = "all"
-    
+            
         }
     }}
 
 
-    
-    
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destinationViewController.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
