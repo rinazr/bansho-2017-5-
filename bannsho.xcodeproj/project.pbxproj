@@ -29,6 +29,18 @@
 		4355DC9A1E2B588600781E68 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355DC991E2B588600781E68 /* CollectionCell.swift */; };
 		4355DC9C1E2B5F4A00781E68 /* 1-nakajima-b.png in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */; };
 		435DA25D1DF3FA7C0044A56D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435DA25C1DF3FA7C0044A56D /* MainViewController.swift */; };
+		437A65151F6E544200560A5C /* 9546299.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65141F6E544200560A5C /* 9546299.png */; };
+		437A65201F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65161F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png */; };
+		437A65211F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65171F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png */; };
+		437A65221F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.27.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65181F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.27.png */; };
+		437A65231F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.36.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65191F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.36.png */; };
+		437A65251F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.54.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A651B1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.54.png */; };
+		437A65271F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.04.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A651D1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.04.png */; };
+		437A65281F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A651E1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png */; };
+		437A65291F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A651F1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png */; };
+		437A652B1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A652A1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png */; };
+		43918A171F6E4558002514A1 /* アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = 43918A161F6E4558002514A1 /* アイコン.png */; };
+		43918A1A1F6E4F0F002514A1 /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43918A191F6E4F0F002514A1 /* TanukiMagic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +89,18 @@
 		4355DC991E2B588600781E68 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-nakajima-b.png"; sourceTree = "<group>"; };
 		435DA25C1DF3FA7C0044A56D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		437A65141F6E544200560A5C /* 9546299.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9546299.png; sourceTree = "<group>"; };
+		437A65161F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.09.png"; sourceTree = "<group>"; };
+		437A65171F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.19.png"; sourceTree = "<group>"; };
+		437A65181F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.27.png"; sourceTree = "<group>"; };
+		437A65191F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.36.png"; sourceTree = "<group>"; };
+		437A651B1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.54.png"; sourceTree = "<group>"; };
+		437A651D1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.07.04.png"; sourceTree = "<group>"; };
+		437A651E1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.07.09.png"; sourceTree = "<group>"; };
+		437A651F1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.07.16.png"; sourceTree = "<group>"; };
+		437A652A1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.46.png"; sourceTree = "<group>"; };
+		43918A161F6E4558002514A1 /* アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アイコン.png"; sourceTree = "<group>"; };
+		43918A191F6E4F0F002514A1 /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.release.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.release.xcconfig"; sourceTree = "<group>"; };
 		B47D0371091C756863ED571E /* Pods_bannsho.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bannsho.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,6 +156,7 @@
 		434ED0651DE167E200BC8B73 /* bannsho */ = {
 			isa = PBXGroup;
 			children = (
+				43918A181F6E4EB9002514A1 /* font */,
 				4355DC8E1E2B4CA800781E68 /* image */,
 				434ED0661DE167E200BC8B73 /* AppDelegate.swift */,
 				434ED0681DE167E200BC8B73 /* ViewController.swift */,
@@ -173,6 +198,17 @@
 		4355DC8E1E2B4CA800781E68 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				437A652A1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png */,
+				437A65161F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png */,
+				437A65171F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png */,
+				437A65181F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.27.png */,
+				437A65191F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.36.png */,
+				437A651B1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.54.png */,
+				437A651D1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.04.png */,
+				437A651E1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png */,
+				437A651F1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png */,
+				437A65141F6E544200560A5C /* 9546299.png */,
+				43918A161F6E4558002514A1 /* アイコン.png */,
 				4349AD821EFF933200959502 /* akka.png */,
 				4355DC931E2B4DE900781E68 /* 4-rampo-b.png */,
 				4355DC911E2B4CF000781E68 /* 暗殺教室.jpg */,
@@ -180,6 +216,14 @@
 				4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		43918A181F6E4EB9002514A1 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				43918A191F6E4F0F002514A1 /* TanukiMagic.ttf */,
+			);
+			name = font;
 			sourceTree = "<group>";
 		};
 		8CA4112BE0702AF1675ADC16 /* Frameworks */ = {
@@ -311,15 +355,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				434ED0711DE167E200BC8B73 /* LaunchScreen.storyboard in Resources */,
+				437A65201F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png in Resources */,
 				4349AD831EFF933200959502 /* akka.png in Resources */,
 				4355DC9C1E2B5F4A00781E68 /* 1-nakajima-b.png in Resources */,
 				4355DC921E2B4CF000781E68 /* 暗殺教室.jpg in Resources */,
+				43918A1A1F6E4F0F002514A1 /* TanukiMagic.ttf in Resources */,
+				437A65291F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png in Resources */,
+				437A652B1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png in Resources */,
 				4355DC901E2B4CD900781E68 /* 暗殺教室０.jpg in Resources */,
 				434ED06E1DE167E200BC8B73 /* Assets.xcassets in Resources */,
 				4355DC871E2B405900781E68 /* CustomCell.xib in Resources */,
 				4355DC941E2B4DE900781E68 /* 4-rampo-b.png in Resources */,
 				434ED06C1DE167E200BC8B73 /* Main.storyboard in Resources */,
+				437A65281F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png in Resources */,
+				437A65231F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.36.png in Resources */,
+				437A65151F6E544200560A5C /* 9546299.png in Resources */,
 				4355DC981E2B586400781E68 /* CollectionCell.xib in Resources */,
+				437A65211F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png in Resources */,
+				43918A171F6E4558002514A1 /* アイコン.png in Resources */,
+				437A65251F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.54.png in Resources */,
+				437A65271F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.04.png in Resources */,
+				437A65221F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.27.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

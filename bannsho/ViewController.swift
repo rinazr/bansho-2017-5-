@@ -169,15 +169,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         realm.add(dataModel)
                         
                     }
-                    
-                
-                
-                
-                //gazou
-                let data =  UIImageJPEGRepresentation(pickedImage,0.8)! as NSData as Data
-                let image = UIImage(data:data)
-                self.imageview.image = image
-            }
+            
+                            }
             
         }))
         

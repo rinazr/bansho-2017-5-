@@ -20,7 +20,6 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
     @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         table.dataSource = self
         table.delegate = self
         
@@ -28,26 +27,19 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         table.register(nib, forCellReuseIdentifier: "customCell")
         
         
-        dataModels = realm.objects(DataModel)
-        
-        for dataModel in dataModels {
-            
-            print(dataModel.folderName)
-            
-            if dataModel.folderName != ""{
-                set.insert(dataModel.folderName)
-            }
-        }
-        
-        print(set)
-        
-        
-        array.append(contentsOf: set)
         
         
         //performSegue(withIdentifier: "move1", sender: nil)
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        search()
+        table.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,7 +94,32 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
             CollectionViewController.folderNameString = "all"
             
         }
-    }}
+    }
+
+    
+    func search(){
+    
+    set = Set<String>()
+        array = Array<String>()
+        
+    dataModels = realm.objects(DataModel)
+    
+    for dataModel in dataModels {
+    
+    print(dataModel.folderName)
+    
+    if dataModel.folderName != ""{
+    set.insert(dataModel.folderName)
+    }
+    }
+    
+    print(set)
+    
+    
+    array.append(contentsOf: set)
+
+    }
+}
 
 
 

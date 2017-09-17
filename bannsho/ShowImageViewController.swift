@@ -13,6 +13,7 @@ class ShowImageViewController: UIViewController {
     static var image : UIImage!
     static var name : String!
     static var id : Int!
+    let realm = try! Realm()
     
     @IBOutlet weak var imageview: UIImageView!
     
@@ -21,10 +22,10 @@ class ShowImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if ShowImageViewController.name == ""{
-        self.navigationItem.title = "名称未設定"
+            self.navigationItem.title = "名称未設定"
             
         }else{
-       self.navigationItem.title = ShowImageViewController.name;
+            self.navigationItem.title = ShowImageViewController.name;
         }
         imageview.image = ShowImageViewController.image
         
@@ -46,6 +47,62 @@ class ShowImageViewController: UIViewController {
         
     }
     
+    @IBAction func edit(_ sender: UIBarButtonItem) {
+        let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+            
+            NSLog("OKボタンが押されました")
+            
+            
+            
+            if let textFields = alert.textFields{
+                let textField1 = textFields[0]
+                let textField2 = textFields[1]
+                print(textField1.text!)
+                print(textField2.text!)
+                
+                
+                let editData: DataModel = self.realm.objects(DataModel).filter("id == " + String(ShowImageViewController.id)).first!
+                
+                try! self.realm.write {
+                    
+                    editData.name = textField1.text!
+                    editData.folderName = textField2.text!
+                    
+                    
+                }
+            }
+            self.navigationController!.popViewController(animated: true)
+        }))
+        
+        //テキストフィールド
+        alert.addTextField(configurationHandler: {(textField) -> Void in
+            
+           var nowData = self.realm.objects(DataModel).filter("id == " + String(ShowImageViewController.id)).first!
+            textField.text = nowData.name
+        })
+        
+        alert.addTextField(configurationHandler: {(textField) -> Void in
+            var nowData = self.realm.objects(DataModel).filter("id == " + String(ShowImageViewController.id)).first!
+            textField.text = nowData.folderName
+        })
+        
+        
+        
+        //        var table = UITableView()
+        //        table.frame = CGRect(x:0,y:0,width:view.bounds.width*0.85,height:150)
+        //        table.dataSource = self
+        //        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        //alert.view.addSubview(table)
+        
+        
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func trashPhoto(_ sender: UIBarButtonItem) {
         // アラートを作成
         let alert = UIAlertController(
@@ -62,8 +119,8 @@ class ShowImageViewController: UIViewController {
             try! realm.write() {
                 realm.delete(trashData)
             }
-        self.navigationController?.popViewController(animated: true)      
-
+            self.navigationController?.popViewController(animated: true)
+            
         }))
         
         alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel))
@@ -72,7 +129,7 @@ class ShowImageViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
         
-            }
+    }
     
     /*
      // MARK: - Navigation

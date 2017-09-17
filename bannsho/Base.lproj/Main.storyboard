@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RD2-xB-cdO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RD2-xB-cdO">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TanukiMagic.ttf">
+            <string>Tanuki-Permanent-Marker</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,26 +26,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzY-zY-u9a">
-                                <rect key="frame" x="145" y="219" width="31" height="30"/>
-                                <state key="normal" title="写真"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzY-zY-u9a">
+                                <rect key="frame" x="39" y="169" width="142" height="98"/>
+                                <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="17"/>
+                                <state key="normal" title="写真">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktb-sL-vPC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tx-Cy-M3z">
-                                <rect key="frame" x="129" y="319" width="62" height="30"/>
-                                <state key="normal" title="フォルダ"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9546299.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Vg-nb-HUr">
+                                <rect key="frame" x="0.0" y="529" width="88" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2017-09-17 16.06.46.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sd3-b4-Etw">
+                                <rect key="frame" x="182" y="72" width="129" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2017-09-17 16.06.59.png" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-H9-U6X">
+                                <rect key="frame" x="0.0" y="377" width="311" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tx-Cy-M3z">
+                                <rect key="frame" x="152" y="275" width="138" height="94"/>
+                                <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="17"/>
+                                <state key="normal" title="フォルダ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wmi-ec-QHW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIh-IN-Vwr">
-                                <rect key="frame" x="32" y="420" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.19369808557082879" green="0.4865608808290155" blue="0.36750070961334658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5Tx-Cy-M3z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="3yx-RQ-xKX"/>
                             <constraint firstItem="5Tx-Cy-M3z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgf-zR-O5N"/>
@@ -50,13 +69,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="03H-aa-brh"/>
                     <connections>
-                        <outlet property="imageview" destination="sIh-IN-Vwr" id="HdM-Hv-SxT"/>
                         <segue destination="z6C-4d-x1S" kind="push" identifier="toMainView" id="svQ-cO-nui"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="120"/>
+            <point key="canvasLocation" x="1171.875" y="119.36619718309859"/>
         </scene>
         <!--File View Controller-->
         <scene sceneID="0eq-q2-aQs">
@@ -117,7 +135,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-B4-OcR">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.19052678346633911" green="0.4848780632019043" blue="0.37013447284698486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oAF-IN-DdU">
                                     <size key="itemSize" width="75" height="75"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -182,6 +200,12 @@
                                             <action selector="shareImage:" destination="QsV-DZ-3Ee" id="JIe-Py-Hxd"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eRD-C0-Amr"/>
+                                    <barButtonItem title="Item" image="アイコン.png" width="80" id="gyD-Lo-8SO">
+                                        <connections>
+                                            <action selector="edit:" destination="QsV-DZ-3Ee" id="SkU-Nn-eio"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="b7e-WC-eGW"/>
                                     <barButtonItem systemItem="trash" id="u2C-P3-hsB">
                                         <connections>
@@ -228,4 +252,10 @@
             <point key="canvasLocation" x="138.75" y="121.47887323943662"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="9546299.png" width="85" height="47"/>
+        <image name="アイコン.png" width="30" height="30"/>
+        <image name="スクリーンショット 2017-09-17 16.06.46.png" width="256" height="188"/>
+        <image name="スクリーンショット 2017-09-17 16.06.59.png" width="306" height="228"/>
+    </resources>
 </document>
