@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import  RealmSwift
+import RealmSwift
 
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -30,7 +30,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         collection.delegate = self
         // Do any additional setup after loading the view.
         
-       
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +82,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         performSegue(withIdentifier: "toFinal", sender: nil)
         
-       
+        
     }
     
     
@@ -104,9 +104,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             searchResult.append(contentsOf: dataModels)
             
         }
-
+        
     }
-
+    
     
     /*
      // MARK: - Navigation

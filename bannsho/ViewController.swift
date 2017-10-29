@@ -141,36 +141,36 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 
                 
-              
+                
+                
+                
+                
+                let dataModel = DataModel()
+                
+                dataModel.name = textField1.text!
+                dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
+                dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage), 0.0)! as NSData
+                dataModel.folderName = textField2.text!
+                
+                
+                let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
+                
+                if result?.id == nil{
                     
+                    dataModel.id = 0
+                }else{
+                    dataModel.id = (result?.id)! + 1
+                }
+                
+                
+                print("ID:" + String(describing: dataModel.id))
+                
+                try! realm.write {
+                    realm.add(dataModel)
                     
-                    
-                    let dataModel = DataModel()
-                    
-                    dataModel.name = textField1.text!
-                    dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
-                    dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage), 0.0)! as NSData
-                    dataModel.folderName = textField2.text!
-                    
-                    
-                    let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
-                    
-                    if result?.id == nil{
-                        
-                        dataModel.id = 0
-                    }else{
-                        dataModel.id = (result?.id)! + 1
-                    }
-                    
-                    
-                    print("ID:" + String(describing: dataModel.id))
-                    
-                    try! realm.write {
-                        realm.add(dataModel)
-                        
-                    }
-            
-                            }
+                }
+                
+            }
             
         }))
         

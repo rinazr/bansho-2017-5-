@@ -17,7 +17,9 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
     let realm = try! Realm()
     
     
+    @IBOutlet weak var plusFile: UIBarButtonItem!
     @IBOutlet weak var table: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
@@ -95,29 +97,29 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
             
         }
     }
-
+    
     
     func search(){
-    
-    set = Set<String>()
+        
+        set = Set<String>()
         array = Array<String>()
         
-    dataModels = realm.objects(DataModel)
-    
-    for dataModel in dataModels {
-    
-    print(dataModel.folderName)
-    
-    if dataModel.folderName != ""{
-    set.insert(dataModel.folderName)
-    }
-    }
-    
-    print(set)
-    
-    
-    array.append(contentsOf: set)
-
+        dataModels = realm.objects(DataModel)
+        
+        for dataModel in dataModels {
+            
+            print(dataModel.folderName)
+            
+            if dataModel.folderName != ""{
+                set.insert(dataModel.folderName)
+            }
+        }
+        
+        print(set)
+        
+        
+        array.append(contentsOf: set)
+        
     }
 }
 

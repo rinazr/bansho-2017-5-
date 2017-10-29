@@ -79,7 +79,7 @@ class ShowImageViewController: UIViewController {
         //テキストフィールド
         alert.addTextField(configurationHandler: {(textField) -> Void in
             
-           var nowData = self.realm.objects(DataModel).filter("id == " + String(ShowImageViewController.id)).first!
+            var nowData = self.realm.objects(DataModel).filter("id == " + String(ShowImageViewController.id)).first!
             textField.text = nowData.name
         })
         
