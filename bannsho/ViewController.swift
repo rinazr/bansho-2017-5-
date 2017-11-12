@@ -42,7 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //image2 = saveData.object(forKey: "2") as? NSData
         //image3 = saveData.object(forKey: "3") as? NSData
         
-        var UIImage1 : UIImage!
+        var _ : UIImage!
         //        var UIImage2 : UIImage!
         //        var UIImage3 : UIImage!
         
@@ -94,6 +94,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         //撮影した画像をUIImage型として取得しpickedImageに代入
         let pickedImage : UIImage = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+       
+        self.move2()
+        
         //
         //        //numberDataを取得する
         //        if saveData.object(forKey: "number") != nil{
@@ -123,83 +126,71 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //閉じる処理
         imagePicker.dismiss(animated: true, completion: nil)
         
-        let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
+//        let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
+//        
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+//            self.navigationController!.popViewController(animated: true)
+//            NSLog("OKボタンが押されました")
+//            
+//            
+//            
+//            if let textFields = alert.textFields{
+//                let textField1 = textFields[0]
+//              
+//                print(textField1.text!)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
-            self.navigationController!.popViewController(animated: true)
-            NSLog("OKボタンが押されました")
-            
-            
-            
-            if let textFields = alert.textFields{
-                let textField1 = textFields[0]
-                let textField2 = textFields[1]
-                print(textField1.text!)
-                print(textField2.text!)
-                
-                let realm = try! Realm()
-                
-                
-                
-                
-                
-                
-                
-                let dataModel = DataModel()
-                
-                dataModel.name = textField1.text!
-                dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
-                dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage), 0.0)! as NSData
-                dataModel.folderName = textField2.text!
-                
-                
-                let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
-                
+//                dataModel.name = textField1.text!
+//                dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
+//                dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage), 0.0)! as NSData
+//                
+//                
+//                
+        /*      let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
+        
                 if result?.id == nil{
                     
                     dataModel.id = 0
                 }else{
                     dataModel.id = (result?.id)! + 1
                 }
-                
-                
+ 
                 print("ID:" + String(describing: dataModel.id))
-                
+        
                 try! realm.write {
                     realm.add(dataModel)
-                    
+        
                 }
-                
-            }
-            
-        }))
-        
-        //テキストフィールド
-        alert.addTextField(configurationHandler: {(textField) -> Void in
-            textField.placeholder = "画像名"
-        })
-        
-        alert.addTextField(configurationHandler: {(textField) -> Void in
-            textField.placeholder = "フォルダ名"
-        })
-        
-        
-        
-        //        var table = UITableView()
-        //        table.frame = CGRect(x:0,y:0,width:view.bounds.width*0.85,height:150)
-        //        table.dataSource = self
-        //        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        //alert.view.addSubview(table)
-        
-        
-        
-        present(alert, animated: true, completion: nil)
-        
-        
-        
+//                
+ */
+//            }
+//            
+//        }))
+//        
+//        //テキストフィールド
+//        alert.addTextField(configurationHandler: {(textField) -> Void in
+//            textField.placeholder = "画像名"
+//        })
+//        
+//        
+//        
+//        //        var table = UITableView()
+//        //        table.frame = CGRect(x:0,y:0,width:view.bounds.width*0.85,height:150)
+//        //        table.dataSource = self
+//        //        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        
+//        //alert.view.addSubview(table)
+//        
+//        
+//        
+//        present(alert, animated: true, completion: nil)
+//        
+//        
+//        
+//    }
     }
-    
+    func move2(){
+        performSegue(withIdentifier: "toAdd", sender: nil)
+    }
     
     func imageToNSData(image: UIImage) -> NSData! {
         
@@ -265,4 +256,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
 }
+
 

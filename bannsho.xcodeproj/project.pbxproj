@@ -39,6 +39,7 @@
 		437A65281F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A651E1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png */; };
 		437A65291F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A651F1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png */; };
 		437A652B1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A652A1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png */; };
+		438A925E1FA5AD420096E0A0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A925D1FA5AD420096E0A0 /* AddViewController.swift */; };
 		43918A171F6E4558002514A1 /* アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = 43918A161F6E4558002514A1 /* アイコン.png */; };
 		43918A1A1F6E4F0F002514A1 /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43918A191F6E4F0F002514A1 /* TanukiMagic.ttf */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		437A651E1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.07.09.png"; sourceTree = "<group>"; };
 		437A651F1F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.07.16.png"; sourceTree = "<group>"; };
 		437A652A1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.46.png"; sourceTree = "<group>"; };
+		438A925D1FA5AD420096E0A0 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = ../AddViewController.swift; sourceTree = "<group>"; };
 		43918A161F6E4558002514A1 /* アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アイコン.png"; sourceTree = "<group>"; };
 		43918A191F6E4F0F002514A1 /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.release.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				43918A181F6E4EB9002514A1 /* font */,
 				4355DC8E1E2B4CA800781E68 /* image */,
 				434ED0661DE167E200BC8B73 /* AppDelegate.swift */,
+				438A925D1FA5AD420096E0A0 /* AddViewController.swift */,
 				434ED0681DE167E200BC8B73 /* ViewController.swift */,
 				434ED06A1DE167E200BC8B73 /* Main.storyboard */,
 				434ED06D1DE167E200BC8B73 /* Assets.xcassets */,
@@ -448,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438A925E1FA5AD420096E0A0 /* AddViewController.swift in Sources */,
 				4355DC961E2B576800781E68 /* CollectionViewController.swift in Sources */,
 				435DA25D1DF3FA7C0044A56D /* MainViewController.swift in Sources */,
 				4355DC8B1E2B429600781E68 /* FileViewController.swift in Sources */,

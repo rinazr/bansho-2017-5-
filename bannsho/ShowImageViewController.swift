@@ -84,7 +84,7 @@ class ShowImageViewController: UIViewController {
         })
         
         alert.addTextField(configurationHandler: {(textField) -> Void in
-            var nowData = self.realm.objects(DataModel).filter("id == " + String(ShowImageViewController.id)).first!
+            var nowData = self.realm.objects(DataModel.self).filter("id == " + String(ShowImageViewController.id)).first!
             textField.text = nowData.folderName
         })
         

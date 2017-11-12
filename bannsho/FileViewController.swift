@@ -17,7 +17,7 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
     let realm = try! Realm()
     
     
-    @IBOutlet weak var plusFile: UIBarButtonItem!
+    @IBOutlet weak var plusFileB: UIBarButtonItem!
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
@@ -98,6 +98,57 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         }
     }
     
+//    @IBAction func plusFile(_ sender: Any) {
+//        let alert: UIAlertController = UIAlertController(title: "追加", message: "", preferredStyle: .alert)
+//        
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+//            NSLog("フォルダが追加されました")
+//            
+//            
+//            
+//            if let textFields = alert.textFields{
+//                let textField2 = textFields[1]
+//                print(textField2.text!)
+//                
+//                let realm = try! Realm()
+//                
+//                let dataModel = DataModel()
+//                
+// 
+//                dataModel.folderName = textField2.text!
+//                
+//                
+//                let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
+//                
+//                if result?.id == nil{
+//                    
+//                    dataModel.id = 0
+//                }else{
+//                    dataModel.id = (result?.id)! + 1
+//                }
+//                
+//                
+//                print("ID:" + String(describing: dataModel.id))
+//                
+//                try! realm.write {
+//                    realm.add(dataModel)
+//                    
+//                }
+//                
+//            }
+//
+//            
+//            
+//            
+//            
+//        }))
+//        alert.addTextField(configurationHandler: {(textField) -> Void in
+//            textField.placeholder = "フォルダ名"
+//            
+//        })
+//        
+//          present(alert, animated: true, completion: nil)
+//    }
     
     func search(){
         
