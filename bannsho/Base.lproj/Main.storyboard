@@ -152,8 +152,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addNewfolderName" destination="wDE-Nk-j5D" id="rmP-h3-uiu"/>
-                        <outlet property="folderNamePickerView" destination="p9Y-pw-g5o" id="CJV-OH-b9y"/>
+                        <outlet property="folderNamePickerView" destination="p9Y-pw-g5o" id="1OJ-Fd-49i"/>
                         <outlet property="folderNameTextField" destination="F2e-Ad-0Rm" id="fdw-aF-QlE"/>
                         <outlet property="imagetaken" destination="pFK-4A-c72" id="bec-1v-oBz"/>
                         <outlet property="name" destination="wDE-Nk-j5D" id="xXu-LC-CBa"/>
@@ -184,7 +183,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="22"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EB0-sZ-tEG" id="tIf-5J-aLC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

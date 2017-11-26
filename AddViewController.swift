@@ -17,6 +17,8 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet weak var folderNameTextField: UITextField!
     @IBOutlet weak var save: UIBarButtonItem!
     
+    var receive :UIImage!
+    
    
     var list = ["アイス" , "じゃがりこ" , "ジャガビー", "チョコレート効果"]
     override func viewDidLoad() {
@@ -25,6 +27,8 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         
         folderNamePickerView.dataSource = self
         folderNamePickerView.delegate = self
+        
+         imagetaken.image = receive
      
         
     }
@@ -57,13 +61,18 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         }
         
         print("ID:" + String(describing: dataModel.id))
-        
+        //idと同様に名前なども書く：基本；datamodel.名前　= "aaa"　↩︎dataModel. ex.folderName = textField.text (次回)
+        dataModel.name = name.text!
+        let pickedImage = receive
+        dataModel.image = UIImageJPEGRepresentation(pickedImage!,0.8)! as NSData
+        dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage!), 0.0)! as NSData
+        dataModel.folderName =  folderNameTextField.text!
         try! realm.write {
             realm.add(dataModel)
             
         }
 
-   //ここまで
+
         
         
         
@@ -99,6 +108,37 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
          */
         
         
+    }
+    
+    func resizeImage(src: UIImage) -> UIImage {
+        
+        var resizedSize : CGSize!
+        let maxLongSide : CGFloat = 75
+        
+        // リサイズが必要か？
+        let ss = src.size
+        if maxLongSide == 0 || ( ss.width <= maxLongSide && ss.height <= maxLongSide ) {
+            resizedSize = ss
+            return src
+        }
+        
+        // TODO: リサイズ回りの処理を切りだし
+        
+        // リサイズ後のサイズを計算
+        let ax = ss.width / maxLongSide
+        let ay = ss.height / maxLongSide
+        let ar = ax > ay ? ax : ay
+        let re = CGRect(x: 0, y: 0, width: ss.width / ar, height: ss.height / ar)
+        
+        // リサイズ
+        UIGraphicsBeginImageContext(re.size)
+        src.draw(in: re)
+        let dst = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        resizedSize = dst?.size
+        
+        return dst!
     }
     
     
