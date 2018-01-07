@@ -90,7 +90,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         searchResult = []
         
-        dataModels = realm.objects(DataModel)
+        dataModels = realm.objects(DataModel.self)
         
         if CollectionViewController.folderNameString != "all"{
             

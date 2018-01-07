@@ -21,19 +21,17 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
+        // Do any additional setup after loading the view.
+        
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
         
         let nib = UINib(nibName: "CustomCell", bundle:nil)
         table.register(nib, forCellReuseIdentifier: "customCell")
-        
-        
-        
-        
         //performSegue(withIdentifier: "move1", sender: nil)
         
-        // Do any additional setup after loading the view.
+        
     }
     
     
@@ -75,8 +73,6 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
             cell.imageB.image = UIImage(named: "暗殺教室０.jpg")
             break
         }
-        
-        
         return cell
     }
     
@@ -94,60 +90,37 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
             
         }else if indexPath.row == 0{
             CollectionViewController.folderNameString = "all"
-            
-        }
+            }
     }
     
 //    @IBAction func plusFile(_ sender: Any) {
 //        let alert: UIAlertController = UIAlertController(title: "追加", message: "", preferredStyle: .alert)
-//        
 //        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
 //            NSLog("フォルダが追加されました")
-//            
-//            
-//            
 //            if let textFields = alert.textFields{
 //                let textField2 = textFields[1]
-//                print(textField2.text!)
-//                
+//                print(textField2.text!) 
 //                let realm = try! Realm()
-//                
 //                let dataModel = DataModel()
-//                
-// 
 //                dataModel.folderName = textField2.text!
-//                
-//                
 //                let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
-//                
 //                if result?.id == nil{
-//                    
 //                    dataModel.id = 0
 //                }else{
 //                    dataModel.id = (result?.id)! + 1
 //                }
-//                
-//                
 //                print("ID:" + String(describing: dataModel.id))
 //                
 //                try! realm.write {
 //                    realm.add(dataModel)
-//                    
 //                }
 //                
 //            }
-//
-//            
-//            
-//            
-//            
 //        }))
 //        alert.addTextField(configurationHandler: {(textField) -> Void in
 //            textField.placeholder = "フォルダ名"
-//            
 //        })
-//        
-//          present(alert, animated: true, completion: nil)
+//        present(alert, animated: true, completion: nil)
 //    }
     
     func search(){
@@ -155,7 +128,7 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         set = Set<String>()
         array = Array<String>()
         
-        dataModels = realm.objects(DataModel)
+        dataModels = realm.objects(DataModel.self)
         
         for dataModel in dataModels {
             
@@ -173,11 +146,6 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         
     }
 }
-
-
-
-
-
 
 /*
  // MARK: - Navigation
