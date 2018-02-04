@@ -29,6 +29,7 @@
 		4355DC9A1E2B588600781E68 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355DC991E2B588600781E68 /* CollectionCell.swift */; };
 		4355DC9C1E2B5F4A00781E68 /* 1-nakajima-b.png in Resources */ = {isa = PBXBuildFile; fileRef = 4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */; };
 		435DA25D1DF3FA7C0044A56D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435DA25C1DF3FA7C0044A56D /* MainViewController.swift */; };
+		43749CF82026E540007F101A /* フォルダアイコン11.png in Resources */ = {isa = PBXBuildFile; fileRef = 43749CF72026E53F007F101A /* フォルダアイコン11.png */; };
 		437A65151F6E544200560A5C /* 9546299.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65141F6E544200560A5C /* 9546299.png */; };
 		437A65201F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65161F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png */; };
 		437A65211F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png in Resources */ = {isa = PBXBuildFile; fileRef = 437A65171F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png */; };
@@ -62,7 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2CBE427282BE8E9DD439D9A9 /* Pods-bannsho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.debug.xcconfig"; sourceTree = "<group>"; };
+		0559DB80320123324E6353E9 /* Pods-bannsho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.debug.xcconfig"; sourceTree = "<group>"; };
 		432595061E5031050087A808 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4349AD821EFF933200959502 /* akka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akka.png; sourceTree = "<group>"; };
 		434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		4355DC991E2B588600781E68 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		4355DC9B1E2B5F4A00781E68 /* 1-nakajima-b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-nakajima-b.png"; sourceTree = "<group>"; };
 		435DA25C1DF3FA7C0044A56D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		43749CF72026E53F007F101A /* フォルダアイコン11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "フォルダアイコン11.png"; sourceTree = "<group>"; };
 		437A65141F6E544200560A5C /* 9546299.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9546299.png; sourceTree = "<group>"; };
 		437A65161F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.09.png"; sourceTree = "<group>"; };
 		437A65171F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2017-09-17 16.06.19.png"; sourceTree = "<group>"; };
@@ -103,8 +105,8 @@
 		438A925D1FA5AD420096E0A0 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = ../AddViewController.swift; sourceTree = "<group>"; };
 		43918A161F6E4558002514A1 /* アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アイコン.png"; sourceTree = "<group>"; };
 		43918A191F6E4F0F002514A1 /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
-		67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.release.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.release.xcconfig"; sourceTree = "<group>"; };
 		B47D0371091C756863ED571E /* Pods_bannsho.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bannsho.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02127E9995C173EF2B8237B /* Pods-bannsho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.release.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +142,8 @@
 				434ED07A1DE167E300BC8B73 /* bannshoTests */,
 				434ED0851DE167E300BC8B73 /* bannshoUITests */,
 				434ED0641DE167E200BC8B73 /* Products */,
-				C5D2E635C3C52F98D8E4B9CF /* Pods */,
 				8CA4112BE0702AF1675ADC16 /* Frameworks */,
+				8FB493BE14CDAA676269979F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +203,7 @@
 		4355DC8E1E2B4CA800781E68 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				43749CF72026E53F007F101A /* フォルダアイコン11.png */,
 				437A652A1F6E578E00560A5C /* スクリーンショット 2017-09-17 16.06.46.png */,
 				437A65161F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.09.png */,
 				437A65171F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.19.png */,
@@ -237,11 +240,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C5D2E635C3C52F98D8E4B9CF /* Pods */ = {
+		8FB493BE14CDAA676269979F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2CBE427282BE8E9DD439D9A9 /* Pods-bannsho.debug.xcconfig */,
-				67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */,
+				0559DB80320123324E6353E9 /* Pods-bannsho.debug.xcconfig */,
+				C02127E9995C173EF2B8237B /* Pods-bannsho.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -253,12 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 434ED08B1DE167E300BC8B73 /* Build configuration list for PBXNativeTarget "bannsho" */;
 			buildPhases = (
-				9430D7F84C2C87F08EB21994 /* [CP] Check Pods Manifest.lock */,
+				84E060973491C4234847E2D8 /* [CP] Check Pods Manifest.lock */,
 				434ED05F1DE167E200BC8B73 /* Sources */,
 				434ED0601DE167E200BC8B73 /* Frameworks */,
 				434ED0611DE167E200BC8B73 /* Resources */,
-				DD3F7F5E70BF526052803806 /* [CP] Embed Pods Frameworks */,
-				C0027D08588930594D820AC8 /* [CP] Copy Pods Resources */,
+				360338AA7F3185A357289070 /* [CP] Embed Pods Frameworks */,
+				405FA3627204247A2EDA1BF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -379,6 +382,7 @@
 				437A65251F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.54.png in Resources */,
 				437A65271F6E56C800560A5C /* スクリーンショット 2017-09-17 16.07.04.png in Resources */,
 				437A65221F6E56C800560A5C /* スクリーンショット 2017-09-17 16.06.27.png in Resources */,
+				43749CF82026E540007F101A /* フォルダアイコン11.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,22 +403,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9430D7F84C2C87F08EB21994 /* [CP] Check Pods Manifest.lock */ = {
+		360338AA7F3185A357289070 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bannsho/Pods-bannsho-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bannsho/Pods-bannsho-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C0027D08588930594D820AC8 /* [CP] Copy Pods Resources */ = {
+		405FA3627204247A2EDA1BF1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,19 +438,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bannsho/Pods-bannsho-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD3F7F5E70BF526052803806 /* [CP] Embed Pods Frameworks */ = {
+		84E060973491C4234847E2D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bannsho-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bannsho/Pods-bannsho-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -610,7 +622,7 @@
 		};
 		434ED08C1DE167E300BC8B73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CBE427282BE8E9DD439D9A9 /* Pods-bannsho.debug.xcconfig */;
+			baseConfigurationReference = 0559DB80320123324E6353E9 /* Pods-bannsho.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LCPF7KFHDX;
@@ -625,7 +637,7 @@
 		};
 		434ED08D1DE167E300BC8B73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67ECDE59FBDEE76429E9AD59 /* Pods-bannsho.release.xcconfig */;
+			baseConfigurationReference = C02127E9995C173EF2B8237B /* Pods-bannsho.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LCPF7KFHDX;

@@ -9,9 +9,9 @@
 import UIKit
 import RealmSwift
 
-class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
     @IBOutlet weak var imagetaken: UIImageView!
-   
+    
     @IBOutlet weak var folderNamePickerView: UIPickerView!
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -20,12 +20,12 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     var receive :UIImage!
     var set = Set<String>()
-    var array = Array<String>()
+    var array: [String] = []
     var dataModels :Results<DataModel>!
-
     
    
-        let realm = try! Realm()
+    
+    let realm = try! Realm()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,9 +36,23 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         folderNamePickerView.dataSource = self
         folderNamePickerView.delegate = self
         
-         imagetaken.image = receive
-     
+        imagetaken.image = receive
         
+        nameTextField.delegate = self
+        folderNamePickerView.delegate = self
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        nameTextField.resignFirstResponder()
+        folderNameTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        folderNameTextField.resignFirstResponder()
+        return true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -57,8 +71,8 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     @IBAction func saving(_ sender: Any) {
-
-         let dataModel = DataModel()
+        
+        let dataModel = DataModel()
         
         let result = realm.objects(DataModel.self).sorted(byKeyPath: "id", ascending: true).last
         
@@ -68,47 +82,23 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         }else{
             dataModel.id = (result?.id)! + 1
         }
-        
         print("ID:" + String(describing: dataModel.id))
         //idと同様に名前なども書く：基本；datamodel.名前　= "aaa"　↩︎dataModel. ex.folderName = textField.text
         dataModel.name = nameTextField.text!
         let pickedImage = receive
-        dataModel.image = UIImageJPEGRepresentation(pickedImage!,0.8)! as NSData
-        dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage!), 0.0)! as NSData
+        dataModel.image = UIImageJPEGRepresentation(pickedImage!,0.8)! as Data
+       // dataModel.image = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage!), 0.0)! as Data
         dataModel.folderName =  folderNameTextField.text!
         try! realm.write {
             realm.add(dataModel)
-            
         }
-        
-       /* try! realm.write {
-            realm.add(folderNameTextField.text)
-             //メソッド持っている変数.someMethod(別ラベル:へん数, 引数のラベル: 実際の変数 )
-        }
-        */
-        /*  dataModel.name = name.text!
-         dataModel.image = UIImageJPEGRepresentation(pickedImage,0.8)! as NSData
-         dataModel.reimage = UIImageJPEGRepresentation(self.resizeImage(src: pickedImage), 0.0)! as NSData
-         let result = realm.objects(DataModel).sorted(byKeyPath: "id", ascending: true).last
-         if result?.id == nil{
-         dataModel.id = 0
-         }else{
-         dataModel.id = (result?.id)! + 1
-         }
-         print("ID:" + String(describing: dataModel.id))
-         try! realm.write {
-         realm.add(dataModel)
-         }
-         */
-        
-        
+        navigationController?.popViewController(animated: true)
     }
-    
     func search(){
-
+        
         
         set = Set<String>()
-        array = Array<String>()
+        array.append(" ")
         
         dataModels = realm.objects(DataModel.self)
         
@@ -128,36 +118,35 @@ class AddViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         
     }
     
-    func resizeImage(src: UIImage) -> UIImage {
-        
-        var resizedSize : CGSize!
-        let maxLongSide : CGFloat = 75
-        
-        // リサイズが必要か？
-        let ss = src.size
-        if maxLongSide == 0 || ( ss.width <= maxLongSide && ss.height <= maxLongSide ) {
-            resizedSize = ss
-            return src
-        }
-        
-        // TODO: リサイズ回りの処理を切りだし
-        
-        // リサイズ後のサイズを計算
-        let ax = ss.width / maxLongSide
-        let ay = ss.height / maxLongSide
-        let ar = ax > ay ? ax : ay
-        let re = CGRect(x: 0, y: 0, width: ss.width / ar, height: ss.height / ar)
-        
-        // リサイズ
-        UIGraphicsBeginImageContext(re.size)
-        src.draw(in: re)
-        let dst = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        resizedSize = dst?.size
-        
-        return dst!
-    }
+//    func resizeImage(src: UIImage) -> UIImage {
+//
+//        let maxLongSide : CGFloat = 75
+//
+//        // リサイズが必要か？
+//       let ss = src.size
+//        if maxLongSide == 0 || ( ss.width <= maxLongSide && ss.height <= maxLongSide ) {
+//            resizedSize = ss
+//            return src
+//        }
+//
+//        // TODO: リサイズ回りの処理を切りだし
+//
+//        // リサイズ後のサイズを計算
+//        let ax = ss.width / maxLongSide
+//        let ay = ss.height / maxLongSide
+//        let ar = ax > ay ? ax : ay
+//        let re = CGRect(x: 0, y: 0, width: ss.width / ar, height: ss.height / ar)
+//
+//        // リサイズ
+//        UIGraphicsBeginImageContext(re.size)
+//        src.draw(in: re)
+//        let dst = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//
+//        resizedSize = dst?.size
+//
+//        return dst!
+//    }
     
     
     

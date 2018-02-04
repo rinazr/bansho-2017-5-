@@ -14,8 +14,8 @@ import RealmSwift
 
 class DataModel: Object {
     @objc dynamic var name : String = "画像名"
-    @objc dynamic var image = NSData()
+    @objc dynamic var image = Data()
     @objc dynamic var folderName: String = "所属"
     @objc dynamic var id:Int = 0
-    @objc dynamic var reimage = NSData()
+    @objc dynamic var reimage = Data()
 }

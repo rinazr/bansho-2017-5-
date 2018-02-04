@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="121"/>
+            <point key="canvasLocation" x="1117" y="100"/>
         </scene>
         <!--Title-->
         <scene sceneID="V1y-ow-nPY">
@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sC-YU-QK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="836"/>
+            <point key="canvasLocation" x="877" y="920"/>
         </scene>
         <!--File View Controller-->
         <scene sceneID="0eq-q2-aQs">
@@ -294,33 +294,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRI-Hr-elw">
-                                <rect key="frame" x="0.0" y="72" width="320" height="446"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRI-Hr-elw">
+                                <rect key="frame" x="0.0" y="69" width="414" height="622"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGz-bz-JVo">
-                                <rect key="frame" x="0.0" y="686" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem systemItem="action" id="rRs-f6-Ydd">
-                                        <connections>
-                                            <action selector="shareImage:" destination="QsV-DZ-3Ee" id="JIe-Py-Hxd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eRD-C0-Amr"/>
-                                    <barButtonItem title="Item" image="アイコン.png" width="80" id="gyD-Lo-8SO">
-                                        <connections>
-                                            <action selector="edit:" destination="QsV-DZ-3Ee" id="SkU-Nn-eio"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="b7e-WC-eGW"/>
-                                    <barButtonItem systemItem="trash" id="u2C-P3-hsB">
-                                        <connections>
-                                            <action selector="trashPhoto:" destination="QsV-DZ-3Ee" id="3tF-Cf-zN2"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wz3-r2-5JP">
                                 <rect key="frame" x="0.0" y="13" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -328,6 +305,31 @@
                                     <navigationItem title="Title" id="KBE-3x-yrp"/>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGz-bz-JVo">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="rRs-f6-Ydd">
+                                        <connections>
+                                            <action selector="shareImage:" destination="QsV-DZ-3Ee" id="JIe-Py-Hxd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Vye-M6-uYs"/>
+                                    <barButtonItem title="Item" image="アイコン.png" width="80" id="gyD-Lo-8SO">
+                                        <connections>
+                                            <action selector="edit:" destination="QsV-DZ-3Ee" id="SkU-Nn-eio"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ivv-bZ-YxD"/>
+                                    <barButtonItem id="VrR-6e-Vbq"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2nD-Mv-vhX"/>
+                                    <barButtonItem systemItem="trash" id="u2C-P3-hsB">
+                                        <connections>
+                                            <action selector="trashPhoto:" destination="QsV-DZ-3Ee" id="3tF-Cf-zN2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -338,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jz-Sa-Fap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3213" y="121"/>
+            <point key="canvasLocation" x="3211.594202898551" y="120.65217391304348"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U6f-RT-osa">
@@ -356,7 +358,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzj-rz-J27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="121"/>
+            <point key="canvasLocation" x="351" y="121"/>
         </scene>
     </scenes>
     <resources>

@@ -13,6 +13,7 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
     
     var set: Set<String> = []
     var array : Array<String> = Array<String>()
+    var imageArray: [UIImage] = []
     var dataModels :Results<DataModel>!
     let realm = try! Realm()
     
@@ -39,6 +40,7 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         super.viewWillAppear(animated)
         
         search()
+        searchImage()
         table.reloadData()
     }
     
@@ -70,7 +72,7 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         default:
             cell.label1.text = array[indexPath.row - 1]
             cell.label2.text = ">"
-            cell.imageB.image = UIImage(named: "暗殺教室０.jpg")
+            cell.imageB.image = imageArray[indexPath.row - 1]
             break
         }
         return cell
@@ -145,6 +147,16 @@ class FileViewController: UIViewController, UITableViewDataSource,UITableViewDel
         array.append(contentsOf: set)
         
     }
+    
+    func searchImage(){
+        for folderName in array {
+            let data = realm.objects(DataModel.self).filter("folderName == %@",folderName).last
+            let imageData = data?.image
+            let image = UIImage(data: imageData!)
+            imageArray.append(image!)
+        }
+    }
+
 }
 
 /*

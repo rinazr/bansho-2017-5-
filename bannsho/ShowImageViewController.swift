@@ -19,6 +19,7 @@ class ShowImageViewController: UIViewController {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     
+    @IBOutlet weak var folder: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         if ShowImageViewController.name == ""{
