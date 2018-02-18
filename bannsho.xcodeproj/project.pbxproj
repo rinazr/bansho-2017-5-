@@ -10,6 +10,7 @@
 		07D6682D492CB173A69310C9 /* Pods_bannsho.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47D0371091C756863ED571E /* Pods_bannsho.framework */; };
 		432595071E5031050087A808 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432595061E5031050087A808 /* DataModel.swift */; };
 		4349AD831EFF933200959502 /* akka.png in Resources */ = {isa = PBXBuildFile; fileRef = 4349AD821EFF933200959502 /* akka.png */; };
+		434C0F4E203953890044EFF0 /* ChangeFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434C0F4D203953890044EFF0 /* ChangeFolderViewController.swift */; };
 		434EA7A51EC8361200F17B40 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */; };
 		434ED0671DE167E200BC8B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED0661DE167E200BC8B73 /* AppDelegate.swift */; };
 		434ED0691DE167E200BC8B73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED0681DE167E200BC8B73 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 		0559DB80320123324E6353E9 /* Pods-bannsho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bannsho.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bannsho/Pods-bannsho.debug.xcconfig"; sourceTree = "<group>"; };
 		432595061E5031050087A808 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4349AD821EFF933200959502 /* akka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akka.png; sourceTree = "<group>"; };
+		434C0F4D203953890044EFF0 /* ChangeFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFolderViewController.swift; sourceTree = "<group>"; };
 		434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 		434ED0631DE167E200BC8B73 /* bannsho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bannsho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434ED0661DE167E200BC8B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				4355DC971E2B586400781E68 /* CollectionCell.xib */,
 				432595061E5031050087A808 /* DataModel.swift */,
 				434EA7A41EC8361200F17B40 /* ShowImageViewController.swift */,
+				434C0F4D203953890044EFF0 /* ChangeFolderViewController.swift */,
 			);
 			path = bannsho;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				434EA7A51EC8361200F17B40 /* ShowImageViewController.swift in Sources */,
 				4355DC9A1E2B588600781E68 /* CollectionCell.swift in Sources */,
 				432595071E5031050087A808 /* DataModel.swift in Sources */,
+				434C0F4E203953890044EFF0 /* ChangeFolderViewController.swift in Sources */,
 				4355DC891E2B415700781E68 /* CustomCell.swift in Sources */,
 				434ED0671DE167E200BC8B73 /* AppDelegate.swift in Sources */,
 			);
